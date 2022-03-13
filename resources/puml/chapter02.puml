@@ -1,0 +1,23 @@
+@startuml
+
+class Main {}
+
+interface Print {
+    {method} printWeak
+    {method} printStrong
+}
+class PrintBanner {
+    {method} printWeak
+    {method} printStrong
+}
+class Banner {
+    {method} showWithParen
+    {method} showWithAster
+}
+
+Main --> Print : Uses >
+
+Print <|.. PrintBanner
+Banner <|-- PrintBanner
+
+@enduml
