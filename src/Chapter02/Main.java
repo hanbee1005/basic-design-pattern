@@ -5,5 +5,9 @@ public class Main {
         Print p = new PrintBanner("Hello");
         p.printWeek();
         p.printStrong();
+
+        Print2 p2 = new PrintBanner2("World");
+        p2.printWeak();
+        p2.printStrong();
     }
 }
