@@ -3,6 +3,7 @@
 
 ### 종류
 #### 클래스에 의한 Adapter 패턴 (상속을 사용한 Adapter 패턴)
-![class-diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/hanbee1005/basic-design-pattern/main/resources/puml/chapter02.puml)
+![class-diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/hanbee1005/basic-design-pattern/main/resources/puml/chapter02_1.puml)
 
 #### 인스턴스에 의한 Adapter 패턴 (위임을 사용한 Adapter 패턴)
+![class-diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/hanbee1005/basic-design-pattern/main/resources/puml/chapter02_2.puml)
