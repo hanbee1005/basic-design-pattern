@@ -1,0 +1,24 @@
+@startuml
+
+class AbstractDisplay {
+    {method} open
+    {method} print
+    {method} close
+    {method} display
+}
+
+class charDisplay {
+    {method} open
+    {method} print
+    {method} close
+}
+class StringDisplay {
+    {method} open
+    {method} print
+    {method} close
+}
+
+AbstractDisplay <|-- charDisplay
+AbstractDisplay <|-- StringDisplay
+
+@enduml
