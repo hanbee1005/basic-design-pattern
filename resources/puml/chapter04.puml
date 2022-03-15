@@ -1,0 +1,36 @@
+@startuml
+
+package framework{
+    class Factory{
+        {method} create
+        {method} createProduct
+        {method} registerProduct
+    }
+
+    class Product{
+        {method} use
+    }
+}
+
+package idcard{
+    class IDCardFactory{
+        owners
+        {method} createProduct
+        {method} registerProduct
+        {method} getOwners
+    }
+
+    class IDCard{
+        owner
+        {method} use
+        {method} getOwner
+    }
+}
+
+Factory --> Product : Creates >
+IDCardFactory --> IDCard : Creates >
+
+Factory <|-- IDCardFactory
+Product <|-- IDCard
+
+@enduml
