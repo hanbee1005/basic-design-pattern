@@ -13,5 +13,14 @@ public class Main {
         }
 
         System.out.println("End.");
+
+        System.out.println("===================================");
+
+        // 연습문제 5-1
+        System.out.println("Start.");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(i + ": " + TicketMaker.getInstance().getNextTicketNumber());
+        }
+        System.out.println("End.");
     }
 }
