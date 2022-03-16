@@ -5,3 +5,4 @@
 - [Adapter 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter02)
 - [Template Method 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter03)
 - [Factory Method 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter04)
+- [Singleton 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter05)
