@@ -1,0 +1,32 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+class Manager {
+    showcase
+    {method} register
+    {method} create
+}
+
+interface Product {
+    {method} use
+    {method} createClone
+}
+
+class UnderlinePen {
+    ulchar
+    {method} use
+    {method} createClone
+}
+
+class MessageBox {
+    decochar
+    {method} use
+    {method} createClone
+}
+
+Manager --> Product : Users >
+
+UnderlinePen ..|> Product
+MessageBox ..|> Product
+
+@enduml
