@@ -1,6 +1,6 @@
 package Chapter07;
 
-public class TextBuilder extends Builder {
+public class TextBuilder implements BuilderInterface {
     private StringBuffer buffer = new StringBuffer();
 
     @Override
