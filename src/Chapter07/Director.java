@@ -1,9 +1,9 @@
 package Chapter07;
 
 public class Director {
-    private BuilderInterface builder;
+    private Builder builder;
 
-    public Director(BuilderInterface builder) {
+    public Director(Builder builder) {
         this.builder = builder;
     }
 
