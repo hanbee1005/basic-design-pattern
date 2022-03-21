@@ -1,0 +1,72 @@
+@startuml
+
+package factory {
+    class Factory {
+        {static}{method} getFactory
+        {method} createLink
+        {method} createTray
+        {method} createPage
+    }
+
+    class Item {
+        caption
+        {method} makeHTML
+    }
+
+    class Link {
+        url
+        {method} makeHTML
+    }
+
+    class Tray {
+        tray
+        {method} add
+        {method} makeHTML
+    }
+
+    class Page {
+        title
+        author
+        {method} add
+        {method} output
+        {method} makeHTML
+    }
+}
+
+Item <|-- Link
+Item <|-- Tray
+Item <--o Tray
+
+Factory --> Link : Creates >
+Factory --> Tray : Creates >
+Factory --> Page : Creates >
+
+package listfactory{
+    class ListFactory {
+        {method} createLink
+        {method} createTray
+        {method} createPage
+    }
+
+    class ListLink {
+        {method} makeHTML
+    }
+
+    class ListTray {
+        {method} makeHTML
+    }
+
+    class ListPage {
+        {method} makeHTML
+    }
+}
+
+ListLink --|> Link
+ListTray --|> Tray
+ListPage --|> Page
+
+ListFactory --> ListLink : Creates >
+ListFactory --> ListTray : Creates >
+ListFactory --> ListPage : Creates >
+
+@enduml
