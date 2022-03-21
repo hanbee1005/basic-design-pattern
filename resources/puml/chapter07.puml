@@ -1,0 +1,46 @@
+@startuml
+
+class Main {}
+
+class Director {
+    builder
+    {method} construct
+}
+
+interface Builder {
+    {method} makeTitle
+    {method} makeString
+    {method} makeItems
+    {method} close
+}
+
+class TextBuilder {
+    buffer
+    {method} makeTitle
+    {method} makeString
+    {method} makeItems
+    {method} close
+    {method} getResult
+}
+
+class HTMLBuilder {
+    filename
+    writer
+    {method} makeTitle
+    {method} makeString
+    {method} makeItems
+    {method} close
+    {method} getResult
+}
+
+Main --> Director : Uses >
+
+Director o-> Builder
+
+TextBuilder --|> Builder
+HTMLBuilder --|> Builder
+
+Main --> TextBuilder : Uses >
+Main --> HTMLBuilder : Uses >
+
+@enduml
