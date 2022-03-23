@@ -10,5 +10,8 @@ public class Main {
         d2.display();
         d3.display();
         d3.multiDisplay(5);
+
+        RandomCountDisplay randomCountDisplay = new RandomCountDisplay(new StringDisplayImpl("Hello, Random."));
+        randomCountDisplay.randomDisplay(10);
     }
 }
