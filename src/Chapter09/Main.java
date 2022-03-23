@@ -16,5 +16,10 @@ public class Main {
 
         CountDisplay fileDisplay = new CountDisplay(new FileDisplayImpl("start.txt"));
         fileDisplay.multiDisplay(3);
+
+        IncreaseDisplay increaseDisplay1 = new IncreaseDisplay(new CharDisplayImpl('<', '*', '>'), 1);
+        IncreaseDisplay increaseDisplay2 = new IncreaseDisplay(new CharDisplayImpl('|', '#', '-'), 2);
+        increaseDisplay1.increaseDisplay(4);
+        increaseDisplay2.increaseDisplay(6);
     }
 }

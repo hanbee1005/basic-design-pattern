@@ -1,45 +1,61 @@
 @startuml
 
-class Display {
-    impl
-    {method} open
-    {method} print
-    {method} close
-    {method} display
+package 기능계층 {
+    class Display {
+        impl
+        {method} open
+        {method} print
+        {method} close
+        {method} display
+    }
+
+    class CountDisplay {
+        {method} multiDisplay
+    }
+
+    class RandomCountDisplay {
+        {method} randomDisplay
+    }
+
+    class IncreaseDisplay {
+        {method} increaseDisplay
+    }
 }
 
-class DisplayImpl {
-    {method} rawOpen
-    {method} rawPrint
-    {method} rawClose
-}
+package 구현계층 {
+    class DisplayImpl {
+        {method} rawOpen
+        {method} rawPrint
+        {method} rawClose
+    }
 
-class CountDisplay {
-    {method} multiDisplay
-}
+    class StringDisplayImpl {
+        {method} rawOpen
+        {method} rawPrint
+        {method} rawClose
+    }
 
-class RandomCountDisplay {
-    {method} randomDisplay
-}
+    class FileDisplayImpl {
+        {method} rawOpen
+        {method} rawPrint
+        {method} rawClose
+    }
 
-class StringDisplayImpl {
-    {method} rawOpen
-    {method} rawPrint
-    {method} rawClose
-}
-
-class FileDisplayImpl {
-    {method} rawOpen
-    {method} rawPrint
-    {method} rawClose
+    class CharDisplayImpl {
+        {method} rawOpen
+        {method} rawPrint
+        {method} rawClose
+    }
 }
 
 Display o--> DisplayImpl
 
 Display <|-- CountDisplay
 CountDisplay <|-- RandomCountDisplay
+CountDisplay <|-- IncreaseDisplay
 
 DisplayImpl <|-- StringDisplayImpl
 DisplayImpl <|-- FileDisplayImpl
+DisplayImpl <|-- CharDisplayImpl
 
 @enduml
