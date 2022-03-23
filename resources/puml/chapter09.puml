@@ -18,6 +18,10 @@ class CountDisplay {
     {method} multiDisplay
 }
 
+class RandomCountDisplay {
+    {method} randomDisplay
+}
+
 class StringDisplayImpl {
     {method} rawOpen
     {method} rawPrint
@@ -27,6 +31,8 @@ class StringDisplayImpl {
 Display o--> DisplayImpl
 
 Display <|-- CountDisplay
+CountDisplay <|-- RandomCountDisplay
+
 DisplayImpl <|-- StringDisplayImpl
 
 @enduml
