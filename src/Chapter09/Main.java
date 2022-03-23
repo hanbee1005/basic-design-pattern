@@ -13,5 +13,8 @@ public class Main {
 
         RandomCountDisplay randomCountDisplay = new RandomCountDisplay(new StringDisplayImpl("Hello, Random."));
         randomCountDisplay.randomDisplay(10);
+
+        CountDisplay fileDisplay = new CountDisplay(new FileDisplayImpl("start.txt"));
+        fileDisplay.multiDisplay(3);
     }
 }

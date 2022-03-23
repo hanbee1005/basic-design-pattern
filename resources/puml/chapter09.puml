@@ -28,11 +28,18 @@ class StringDisplayImpl {
     {method} rawClose
 }
 
+class FileDisplayImpl {
+    {method} rawOpen
+    {method} rawPrint
+    {method} rawClose
+}
+
 Display o--> DisplayImpl
 
 Display <|-- CountDisplay
 CountDisplay <|-- RandomCountDisplay
 
 DisplayImpl <|-- StringDisplayImpl
+DisplayImpl <|-- FileDisplayImpl
 
 @enduml
