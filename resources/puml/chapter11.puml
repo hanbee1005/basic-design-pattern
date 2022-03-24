@@ -1,0 +1,31 @@
+@startuml
+
+class Entry {
+    {method} getName
+    {method} getSize
+    {method} printList
+    {method} add
+}
+
+class File {
+    name
+    size
+    {method} getName
+    {method} getSize
+    {method} printList
+}
+
+class Directory {
+    name
+    directory
+    {method} getName
+    {method} getSize
+    {method} printList
+    {method} add
+}
+
+Entry <|-- File
+Entry <|-- Directory
+Entry <--o Directory
+
+@enduml

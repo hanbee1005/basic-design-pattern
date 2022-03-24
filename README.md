@@ -11,3 +11,4 @@
 - [Abstract Factory 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter08)
 - [Bridge 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter09)
 - [Strategy 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter10)
+- [Composite 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter11)
