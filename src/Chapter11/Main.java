@@ -30,6 +30,13 @@ public class Main {
             Park.add(new File("game.doc", 400));
             Park.add(new File("junk.mail", 500));
             rootdir.printList();
+
+            File file = new File("fullname.txt", 600);
+            Lee.add(file);
+
+            System.out.println();
+            System.out.println("file = " + file.getFullName());
+            System.out.println("Lee = " + Lee.getFullName());
         } catch (FileTreatmentException e) {
             e.printStackTrace();
         }
