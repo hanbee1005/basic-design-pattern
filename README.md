@@ -13,3 +13,5 @@
 - [Strategy 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter10)
 - [Composite 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter11)
 - [Decorator 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter12)
+- [Visitor 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter13)
+- [Chain of Responsibility 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter14)
