@@ -1,0 +1,42 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+class Support {
+    -name
+    -next
+    {method} +support
+    {method} +setNext
+    {method} #resolve
+}
+
+class NoSupport {
+    {method} #resolve
+}
+
+class LimitSupport {
+    -limit
+    {method} #resolve
+}
+
+class OddSupport {
+    {method} #resolve
+}
+
+class SpecialSupport {
+    -number
+    {method} #resolve
+}
+
+class Main {
+}
+
+Main --> Support : Request >
+
+Support o--> Support
+
+Support <|-- NoSupport
+Support <|-- LimitSupport
+Support <|-- OddSupport
+Support <|-- SpecialSupport
+
+@enduml
