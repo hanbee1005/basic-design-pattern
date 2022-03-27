@@ -3,7 +3,7 @@ package Chapter15.pagemaker;
 import java.io.IOException;
 import java.io.Writer;
 
-public class HtmlWriter {
+class HtmlWriter {
     private Writer writer;
     public HtmlWriter(Writer writer) {
         this.writer = writer;
