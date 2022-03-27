@@ -1,0 +1,28 @@
+@startuml
+
+package pagemarker {
+    class PageMaker {
+        {method} makeWelcomePage
+    }
+
+    class HtmlWriter {
+        writer
+        {method} title
+        {method} paragraph
+        {method} link
+        {method} mailto
+        {method} close
+    }
+
+    class Database {
+        {method} getProperties
+    }
+}
+
+class Main {
+}
+
+Main --> PageMaker : Uses >
+PageMaker --> HtmlWriter : Uses >
+PageMaker --> Database : Uses >
+@enduml
