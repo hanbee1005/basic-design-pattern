@@ -16,3 +16,4 @@
 - [Visitor 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter13)
 - [Chain of Responsibility 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter14)
 - [Facade 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter15)
+- [Mediator 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter16)

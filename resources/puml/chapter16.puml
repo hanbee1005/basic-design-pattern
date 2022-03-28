@@ -1,0 +1,76 @@
+@startuml
+
+interface Mediator {
+    {method} createColleagues
+    {method} colleagueChanged
+}
+
+interface Colleague {
+    {method} setMediator
+    {method} setColleagueEnabled
+}
+
+class LoginFrame {
+    checkGuest
+    checkLogin
+    textUser
+    textPass
+    buttonOk
+    buttonCancel
+    {method} createColleagues
+    {method} colleagueChanged
+    {method} userpassChanged
+    {method} actionPerformed
+}
+
+class Frame {
+}
+
+class ColleagueButton {
+    mediator
+    {method} setMediator
+    {method} setColleagueEnabled
+}
+
+class Button {
+}
+
+class ColleagueTextField {
+    mediator
+    {method} setMediator
+    {method} setColleagueEnabled
+    {method} textValueChanged
+}
+
+class TextField {
+}
+
+class ColleagueCheckbox {
+    mediator
+    {method} setMediator
+    {method} setColleagueEnabled
+    {method} itemStateChanged
+}
+
+class CheckBox {
+}
+
+Mediator <|.. LoginFrame
+Colleague <|.. ColleagueButton
+Colleague <|.. ColleagueTextField
+Colleague <|.. ColleagueCheckbox
+
+LoginFrame --|> Frame
+ColleagueButton --|> Button
+ColleagueTextField --|> TextField
+ColleagueCheckbox --|> CheckBox
+
+Mediator <--o ColleagueButton
+Mediator <--o ColleagueTextField
+Mediator <--o ColleagueCheckbox
+
+LoginFrame o--> ColleagueButton
+LoginFrame o--> ColleagueTextField
+LoginFrame o--> ColleagueCheckbox
+
+@enduml
