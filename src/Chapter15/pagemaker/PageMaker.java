@@ -2,6 +2,7 @@ package Chapter15.pagemaker;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.Properties;
 
 public class PageMaker {
@@ -20,6 +21,24 @@ public class PageMaker {
             writer.mailto(mailaddr, username);
             writer.close();
             System.out.println(filename + " is created for " + mailaddr + "(" + username + ")");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void makeLinkPage(String filename) {
+        try {
+            HtmlWriter writer = new HtmlWriter(new FileWriter(filename));
+            writer.title("Link Page");
+            Properties mailprop = Database.getProperties("maildata");
+            Enumeration<?> en = mailprop.propertyNames();
+            while (en.hasMoreElements()) {
+                String mailaddr = (String) en.nextElement();
+                String username = mailprop.getProperty(mailaddr, "(unknown)");
+                writer.mailto(mailaddr, username);
+            }
+            writer.close();
+            System.out.println(filename + " is created.");
         } catch (IOException e) {
             e.printStackTrace();
         }
