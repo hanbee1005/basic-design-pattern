@@ -1,0 +1,53 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+interface Context {
+    {method} setClock
+    {method} changeState
+    {method} callSecurityCenter
+    {method} recordLog
+}
+
+class SafeFrame {
+    -state
+    {method} setClock
+    {method} changeState
+    {method} callSecurityCenter
+    {method} recordLog
+}
+
+interface State {
+    {method} doClock
+    {method} doUse
+    {method} doAlarm
+    {method} doPhone
+}
+
+class DayState {
+    -singleton
+    {method} -DayState
+    {method} getInstance
+    {method} doClock
+    {method} doUse
+    {method} doAlarm
+    {method} doPhone
+}
+
+class NightState {
+    -singleton
+    {method} -NightState
+    {method} getInstance
+    {method} doClock
+    {method} doUse
+    {method} doAlarm
+    {method} doPhone
+}
+
+Context <|.. SafeFrame
+
+SafeFrame o--> State
+
+State <|.. DayState
+State <|.. NightState
+
+@enduml
