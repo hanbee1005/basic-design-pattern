@@ -1,0 +1,32 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+class Main {
+}
+
+class Gamer {
+    -money
+    -fruits
+    -random
+    -fruitsname
+    {method} +getMoney
+    {method} +bet
+    {method} +createMemento
+    {method} +restoreMemento
+    {method} +toString
+    {method} -getFruit
+}
+
+class Memento {
+    ~money
+    ~fruits
+    {method} + getMoney
+    {method} ~Memento
+    {method} ~addFruit
+}
+
+Main --> Gamer : Requests >
+Gamer --> Memento : Creates >
+Main o--> Memento
+
+@enduml
