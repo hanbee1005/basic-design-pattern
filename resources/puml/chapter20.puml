@@ -1,0 +1,32 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class BigChar {
+    -charname
+    -fontdata
+    {method} print
+}
+
+class BigCharFactory {
+    -pool
+    -singleton
+    {method} -BigCharFactory
+    {method} getInstance
+    {method} getBigChar
+}
+
+class BigString {
+    -bigchars
+    {method} print
+}
+
+class Main {
+}
+
+BigChar <--o BigCharFactory : Creates <
+BigCharFactory <-- BigString : Uses <
+BigChar <--o BigString : Uses <
+BigString <-- Main : Uses <
+
+@enduml
