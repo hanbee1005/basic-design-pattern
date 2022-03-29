@@ -1,0 +1,37 @@
+@startuml
+
+class NumberGenerator {
+    observers
+    {method} addObserver
+    {method} deleteObserver
+    {method} notifyObservers
+    {method} getNumber
+    {method} execute
+}
+
+class RandomNumberGenerator {
+    random
+    number
+    {method} getNumber
+    {method} execute
+}
+
+NumberGenerator <|-- RandomNumberGenerator
+
+interface Observer {
+    {method} update
+}
+
+class DigitObserver {
+    {method} update
+}
+
+class GraphObserver {
+    {method} update
+}
+
+Observer <|.. DigitObserver
+Observer <|.. GraphObserver
+
+NumberGenerator o--> Observer : Notifies >
+@enduml

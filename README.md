@@ -17,3 +17,4 @@
 - [Chain of Responsibility 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter14)
 - [Facade 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter15)
 - [Mediator 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter16)
+- [Observer 패턴](https://github.com/hanbee1005/basic-design-pattern/tree/main/src/Chapter17)
