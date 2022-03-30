@@ -1,0 +1,37 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+interface Printable {
+    {method} setPrinterName
+    {method} getPrinterName
+    {method} print
+}
+
+class Printer {
+    -name
+    {method} setPrinterName
+    {method} getPrinterName
+    {method} print
+    {method} -heavyJob
+}
+
+class PrinterProxy {
+    -name
+    -real
+    {method} setPrinterName
+    {method} getPrinterName
+    {method} print
+    {method} -realize
+}
+
+class Main {
+}
+
+Printable <|.. Printer
+Printable <|.. PrinterProxy
+
+PrinterProxy o--> Printer : Uses >
+Main --> PrinterProxy : Uses >
+
+@enduml
