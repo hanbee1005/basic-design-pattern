@@ -1,0 +1,53 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+interface Command {
+    {method} execute
+}
+
+class MacroCommand {
+    -commands
+    {method} execute
+    {method} append
+    {method} undo
+    {method} clear
+}
+
+interface Drawable {
+    {method} draw
+}
+
+class DrawCommand {
+    -drawable
+    -position
+    {method} execute
+}
+
+class DrawCanvas {
+    history
+    color
+    radius
+    {method} draw
+    {method} print
+}
+
+class Main {
+    history
+    canvas
+    clearButton
+}
+
+Command <|.. MacroCommand
+Command <--o MacroCommand
+Command <|.. DrawCommand
+
+Drawable <--o DrawCommand
+Drawable <|.. DrawCanvas
+
+MacroCommand <--o DrawCanvas
+
+Main o--> DrawCanvas
+Main o--> MacroCommand
+
+@enduml
