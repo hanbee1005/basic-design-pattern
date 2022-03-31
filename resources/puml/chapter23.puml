@@ -1,0 +1,56 @@
+@startuml
+
+class Main {}
+
+class Context {
+    {method} nextToken
+    {method} currentToken
+    {method} skipToken
+    {method} currentNumber
+}
+
+class Node {
+    {method} parse
+}
+
+class ProgramNode {
+    commandListNode
+    {method} parse
+}
+
+class RepeatCommandNode {
+    number
+    commandListNode
+    {method} parse
+}
+
+class CommandListNode {
+    list
+    {method} parse
+}
+
+class CommandNode {
+    node
+    {method} parse
+}
+
+class PrimitiveCommandNode {
+    name
+    {method} parse
+}
+
+Main --> Context : Creates >
+Main --> Node : Uses >
+
+Node <|-- ProgramNode
+Node <|-- RepeatCommandNode
+Node <|-- CommandListNode
+Node <|-- CommandNode
+Node <|-- PrimitiveCommandNode
+
+Node <--o ProgramNode
+Node <--o RepeatCommandNode
+Node <--o CommandListNode
+Node <--o CommandNode
+
+@enduml
